@@ -4,7 +4,7 @@ import { TextField, Button, Container } from "@mui/material";
 import cookie from "cookie"
 
 
-const Login = (props) => {
+const Login = () => {
   const navigate = useNavigate();
 
   const [state, setState] = useState({
@@ -24,7 +24,6 @@ const Login = (props) => {
 
   const login = (e) => {
     e.preventDefault();
-    //payload, Payloads: The contents/message of an action. Compare it to the message of an email.
     const payload = {...user}
     props.userLogin(payload)
     // set cookie here
@@ -66,7 +65,7 @@ const Login = (props) => {
         </form>
       </Container>
     </div>
-  );
-};
+  )
+}
 
-export default Login;
+export default Login

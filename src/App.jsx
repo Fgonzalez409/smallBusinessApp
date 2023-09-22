@@ -1,11 +1,10 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
+import { Provider } from 'react-redux'
+import store from "./redux/store"
+import Navigation from './components/Navigation'
 import { BrowserRouter } from 'react-router-dom'
+import Router from "./Router"
 import cookie from "cookie"
-import Listings from "./components/Listings"
-import Details from "./components/Details"
-import Login from "./components/Login"
-import addListing from './components/addListing'
-import './App.css'
 
 // function checkAuth() {
 //   const cookies = cookie.parse(document.cookie)
@@ -18,13 +17,21 @@ import './App.css'
 // }
 
 function App() {
-  const [count, setCount] = useState(0)
+  // const [isLoggedIn, setIsLoggedIn] = useState(false)
+
+  // useEffect(() => {
+  //   const loginStatus = checkAuth()
+  //   setIsLoggedIn(loginStatus)
+  // },[isLoggedIn, setIsLoggedIn])
 
   return (
-  <BrowserRouter>
-    <Navigation/>
-    <Router/>
-  </BrowserRouter>
+    <Provider store ={store}>
+      <BrowserRouter>
+        <Navigation/>
+        <Router/>
+      </BrowserRouter>
+    </Provider>
+      
   )
 }
 

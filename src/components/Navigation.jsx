@@ -14,16 +14,22 @@ const Navigation = () => {
           <MenuIcon />
         </IconButton>
         <Typography variant="h6" style={{ flexGrow: "1" }}>
-          FakeCars.com
+          Business app
         </Typography>
+
+
         <ul className="nav-list">
+
           <li className="nav-list-item">
-            <Link to="/">Home</Link>
-            
+            <Link to="/">Listings</Link>
           </li>
+
+
           <li className="nav-list-item">
-            <Link to="/about">About</Link>
+            <Link to="/login">Login</Link>
           </li>
+
+          
           <li
             className="nav-list-item"
             onClick={() => {

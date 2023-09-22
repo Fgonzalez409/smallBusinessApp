@@ -3,8 +3,8 @@ import Listings from "../components/Listings"
 
 const mapStateToProps = (state) => {
     return {
-        cars: state.cars
+        listings: state.listings
     }
 }
 
-export default connect(mapStateToProps)(Car)
+export default connect(mapStateToProps)(Listings)

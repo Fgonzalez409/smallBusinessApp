@@ -20,8 +20,10 @@ const checkAuth = () => {
 
 //props imported from state
 const Listings = (props) => {
+
+    console.log(props)
   return (
-    <TableContainer>
+    <Container>
         <Table>
             <TableHead>
                 <TableRow>
@@ -34,16 +36,16 @@ const Listings = (props) => {
                 </TableRow>
             </TableHead>
             <TableBody>
-                {props.Listings.map((listings, idx) => {
+                {/* {props.Listings.map((listings, idx) => {
                     return (
                         <TableRow key={`{listing.id}`}>
 
                         </TableRow>
                     )
-                })}
+                })} */}
             </TableBody>
         </Table>
-    </TableContainer>
+    </Container>
   )
 }
 

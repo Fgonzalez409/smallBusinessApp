@@ -1,11 +1,11 @@
 import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { Box, TextField, Button, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle } from '@mui/material'
-import mapIcon from '../images/mapIcon.jpg'
-import MyMap from './Map'
+// import mapIcon from '../images/mapIcon.jpg'
+// import MyMap from './Map'
 
 
-const addListing = (props) => {
+const addListing = (props) => {//from actions
     const navigate = useNavigate()
 
     // const [open, setOpen] = useState(true)
@@ -54,10 +54,10 @@ const addListing = (props) => {
           <Dialog open={open} onClose={handleClose} maxWidth='xl'>
             <DialogTitle>Add New Business Listing</DialogTitle>
             <DialogContent>
-              <DialogContentText>
+              {/* <DialogContentText>
                 To add a new listing, simply fill out the form below and click
                 "Submit".
-              </DialogContentText>
+              </DialogContentText> */}
               <Box sx={{ display: 'flex', gap: '1em', minWidth: '867px' }}>
                 <Box sx={{ width: '50%', maxWidth: '520px' }}>
                   <TextField

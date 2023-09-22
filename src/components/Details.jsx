@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 // import Geocode from 'react-geocode';
-import MyMap from '../containers/Map';
+// import MyMap from '../containers/Map';
 
 const Details = (props) => {
   console.log(props);

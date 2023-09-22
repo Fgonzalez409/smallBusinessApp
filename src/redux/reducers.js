@@ -14,18 +14,17 @@ const user = (state = [], action) => {
     }
 }
 
-const makes = (state = [], action) => {
-    switch(action.type) {
-        case "FETCH_MAKES":
-            return action.value
-
-        case "REMOVE_MAKE":
-            const makes = [...state]
-            makes.splice(action.value, 1)
-            return makes
-        default:
-            return state
+const listings = (state = [], action) => {
+    switch (action.type) {
+      case 'ADD_LISTING':
+        return [...state, action.value];
+      case 'DELETE_LISTING':
+        const listings = [...state];
+        listings.splice(action.value, 1);
+        return listings;
+      default:
+        return state;
     }
-}
+  };
 
-export default combineReducers({ user, cars, makes })
+export default combineReducers({ user, listings })
